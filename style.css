@@ -1,0 +1,135 @@
+body {
+  display: flex;
+  background-color: lightblue;
+}
+
+.container {
+  background-image: url(back.jpg);
+  margin: 50px auto;
+  height: 570px;
+  width: 450px;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.board {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 20px;
+}
+
+.turn {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  animation-duration: 0.5s;
+}
+
+#cell1:hover {
+  background-color: #009fe9;
+}
+
+#cell2:hover {
+  background-color: #a1a1a1;
+}
+
+#cell3:hover {
+  background-color: #e90000;
+}
+
+#cell4:hover {
+  background-color: #e97c00;
+}
+
+#cell5:hover {
+  background-color: #e9c600;
+}
+
+#cell6:hover {
+  background-color: #e900a3;
+}
+
+#cell7:hover {
+  background-color: #17e900;
+}
+
+#cell8:hover {
+  background-color: #9700e9;
+}
+
+#cell9:hover {
+  background-color: #de5f04;
+}
+
+.turn {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.restart-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4393a2;
+  color: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+    background-color: #45a049;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes cellClickAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cell-clicked {
+  animation: cellClickAnimation .5s;
+}
